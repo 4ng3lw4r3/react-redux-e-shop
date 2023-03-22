@@ -1,28 +1,15 @@
-import { useState, useEffect } from 'react';
 import OneProduct from '../oneProduct/OneProduct';
-import productService from '../../services/productService';
-import styles from './ProductList.module.css';
+import products from '../../data/data';
+
 
 const ProductList = () => { 
-    const [products, setProducts] = useState([]);
-
-    //function to get a response from services fetch and saves value to state;
-
-    const getProducts = ()=> {
-        productService().then((res)=>{
-            setProducts(res);
-        })
-    }
-
-    useEffect(()=>{
-        getProducts();
-    }, []);
 
     console.log(products);
     
     return (
         <div>
-            <OneProduct items={products}/>
+      <h1>Products List</h1>   
+      <OneProduct/>         
         </div>
     )
 }
