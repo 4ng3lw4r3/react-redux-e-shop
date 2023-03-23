@@ -1,5 +1,5 @@
 import React from 'react'
-import products from '../../data/data'
+import products from '../data'
 import styles from './OneProduct.module.css'
 
 const OneProduct = () => {

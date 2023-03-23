@@ -1,5 +1,5 @@
 import OneProduct from '../oneProduct/OneProduct';
-import products from '../../data/data';
+import products from '../data';
 
 
 const ProductList = () => { 
