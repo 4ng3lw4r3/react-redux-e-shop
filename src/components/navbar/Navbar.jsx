@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import CartIcon from "../icons";
+import { CartIcon } from "../icons";
 
 
 const Navbar = () => {
 
-    console.log(
-        useSelector((store) => {
-        console.log(store);
-    })
-    );
+    const {amount} = useSelector((store) =>
+    store.cart);
 
+    // console.log(
+    //     useSelector((store) => {
+    //     console.log(store);
+    // })
+    // );
 
     return (
         <>
@@ -20,11 +22,11 @@ const Navbar = () => {
 
                 <div>
                     <div className="nav-center">
-                        {/* <h3>Miwau</h3> */}
+                        <h3>Miwau</h3>
                         <div className="nav-container">
                         <CartIcon />
                         <div className="amount-container">
-                            <p className='total-amount'>0</p>
+                            <p className='total-amount'>{amount}</p>
                             </div>
                         </div>
                     </div>
