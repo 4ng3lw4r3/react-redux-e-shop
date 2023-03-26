@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import CartSlice from "./features/cart/CartSlice";
-import Home from "./components/home/Home";
+import Home from "./components/Home";
 import ProductList from "./components/productList/ProductList";
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "./components/Navbar";
 import { BrowserRouter } from 'react-router-dom';
+import Cart from "./components/Cart";
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<ProductList />} />
-          <Route path="/cart" element={<CartSlice />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,5 +1,6 @@
 import OneProduct from '../oneProduct/OneProduct';
 import products from '../data';
+import styles from './ProductList.module.css'
 
 
 const ProductList = () => { 
@@ -7,7 +8,7 @@ const ProductList = () => {
     console.log(products);
     
     return (
-        <div>
+        <div className={styles.list}>
       <h1>Products List</h1>   
       <OneProduct/>         
         </div>
