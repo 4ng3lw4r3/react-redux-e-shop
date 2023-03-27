@@ -1,13 +1,16 @@
 import CartItem from "./CartItem"
 import { useSelector, useDispatch } from "react-redux"
-import { clearCart, calculateTotals } from "../features/cart/CartSlice";
+import { calculateTotals } from "../features/cart/CartSlice";
+import { openModal } from "../features/modal/ModalSlice";
 import { useEffect } from "react";
 import Modal from "./Modal";
 
 const Cart = () => {
 
-    const dispatch = useDispatch();
     const { cartItems, total, amount } = useSelector((store) => store.cart);
+    const { isOpen } = useSelector((store) => store.modal);
+    const dispatch = useDispatch();
+
 
 
     useEffect(() => {
@@ -28,7 +31,7 @@ const Cart = () => {
 
     return (
         <>
-            <Modal />
+            {isOpen && <Modal />}
             <section className="cart">
                 <header>
                     <h2>Your bag</h2>
@@ -48,9 +51,8 @@ const Cart = () => {
                     <button
                         className="btn clear-btn"
                         onClick={() => {
-                            dispatch(clearCart)
-                        }
-                        }
+                            dispatch(openModal())
+                        }}
                     >
                         Clear cart
                     </button>
