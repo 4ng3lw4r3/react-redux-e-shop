@@ -1,3 +1,5 @@
+♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡e-shop w react redux♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡
+
 ### `npm install && start`
 
 In the project directory, you can run:
