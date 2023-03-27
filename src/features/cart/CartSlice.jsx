@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
-import cartItems from '../../cartItems';
+import products from '../../products';
 
 
 const initialState = {
-  cartItems: cartItems,
+  products: products,
   amount: 4,
   total: 0,
   isLoading: true,
@@ -14,26 +14,26 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     clearCart: (state) => {
-      state.cartItems = [];
+      state.products = [];
     },
     removeItem: (state, action) => {
       // console.log(action)
       const itemId = action.payload
-      state.cartItems = state.cartItems.filter((item) =>
+      state.products = state.products.filter((item) =>
         item.id !== itemId);
     },
     increase: (state, { payload }) => {
-      const CartItem = state.cartItems.find((item) => item.id === payload.id)
+      const CartItem = state.products.find((item) => item.id === payload.id)
       CartItem.amount = CartItem.amount + 1;
     },
     decrease: (state, { payload }) => {
-      const CartItem = state.cartItems.find((item) => item.id === payload.id)
+      const CartItem = state.products.find((item) => item.id === payload.id)
       CartItem.amount = CartItem.amount - 1;
     },
     calculateTotals: (state) => {
       let amount = 0;
       let total = 0;
-      state.cartItems.forEach((item) => {
+      state.products.forEach((item) => {
         amount += item.amount;
         total += item.amount * item.price;
       });

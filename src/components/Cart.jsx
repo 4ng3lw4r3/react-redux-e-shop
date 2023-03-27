@@ -7,7 +7,7 @@ import Modal from "./Modal";
 
 const Cart = () => {
 
-    const { cartItems, total, amount } = useSelector((store) => store.cart);
+    const { products, total, amount } = useSelector((store) => store.cart);
     const { isOpen } = useSelector((store) => store.modal);
     const dispatch = useDispatch();
 
@@ -15,7 +15,7 @@ const Cart = () => {
 
     useEffect(() => {
         dispatch(calculateTotals());
-    }, [cartItems]);
+    }, [products]);
 
 
     if (amount < 1) {
@@ -37,7 +37,7 @@ const Cart = () => {
                     <h2>Your bag</h2>
                 </header>
                 <div>
-                    {cartItems.map((item) => {
+                    {products.map((item) => {
                         return <CartItem key={item.id} {...item} />;
                     })}
                 </div>
@@ -51,8 +51,7 @@ const Cart = () => {
                     <button
                         className="btn clear-btn"
                         onClick={() => {
-                            dispatch(openModal())
-                        }}
+                            dispatch(openModal())}}
                     >
                         Clear cart
                     </button>

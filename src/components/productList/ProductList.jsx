@@ -1,18 +1,18 @@
 import OneProduct from '../oneProduct/OneProduct';
-import products from '../data';
+import products from '../../products';
 import styles from './ProductList.module.css'
 
 
-const ProductList = () => { 
+const ProductList = () => {
 
-    console.log(products);
-    
-    return (
-        <div className={styles.list}>
-      <h1>Products List</h1>   
-      <OneProduct/>         
-        </div>
-    )
+  console.log(products);
+
+  return (
+    <div className={styles.list}>
+      <h1>Products List</h1>
+      <OneProduct />
+    </div>
+  )
 }
 
 

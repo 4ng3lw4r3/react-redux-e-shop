@@ -5,8 +5,8 @@ import { CartIcon } from "../icons";
 
 const Navbar = () => {
 
-    const {amount} = useSelector((store) =>
-    store.cart);
+    const { amount } = useSelector((store) =>
+        store.cart);
 
     // console.log(
     //     useSelector((store) => {
@@ -24,9 +24,9 @@ const Navbar = () => {
                     <div className="nav-center">
                         <h3>Miwau</h3>
                         <div className="nav-container">
-                        <CartIcon />
-                        <div className="amount-container">
-                            <p className='total-amount'>{amount}</p>
+                            <CartIcon />
+                            <div className="amount-container">
+                                <p className='total-amount'>{amount}</p>
                             </div>
                         </div>
                     </div>

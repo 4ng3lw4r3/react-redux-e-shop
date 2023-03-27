@@ -4,6 +4,26 @@
 
 body {
     margin: 0;
+    background-color: black;
+}
+
+    /* 
+~~~~~~~~~~~~~~~~~
+Home
+~~~~~~~~~~~~~~~~~
+*/
+
+.home-carousel-container {
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+
+}
+
+.one-carousel-item {
+  height: 100%;
+  width: 33%;
 }
 
     /* 
@@ -23,7 +43,7 @@ Navbar
 */
 
 .nav {
-    background-color: rgb(252, 147, 164);
+    background-color: black;
     color: white;
     display: flex;
     justify-content: space-between;
