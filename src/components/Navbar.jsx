@@ -18,11 +18,10 @@ const Navbar = () => {
         <>
             <nav className="nav">
 
-                <Link to="/" className="site-title">Angel Dust</Link>
+                {/* <Link to="/" className="site-title">Angel Dust</Link> */}
 
                 <div>
                     <div className="nav-center">
-                        <h3>Miwau</h3>
                         <div className="nav-container">
                             <CartIcon />
                             <div className="amount-container">

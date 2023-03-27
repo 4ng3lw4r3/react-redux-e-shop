@@ -4,7 +4,25 @@
 
 body {
     margin: 0;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
+}
+
+:root {
+  --clr-primary: #645cff;
+  --clr-primary-dark: #282566;
+  --clr-primary-light: #a29dff;
+  --clr-grey-1: #102a42;
+  --clr-grey-5: #617d98;
+  --clr-grey-10: #f1f5f8;
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.25rem;
+  --large-screen-width: 1170px;
+  --small-screen-width: 90vw;
+  --fixed-width: 50rem;
 }
 
     /* 
@@ -14,7 +32,7 @@ Home
 */
 
 .home-carousel-container {
-  height: 100%;
+  height: 80%;
   width: 100%;
   display: inline-flex;
   justify-content: center;
@@ -26,61 +44,73 @@ Home
   width: 33%;
 }
 
+
     /* 
 ~~~~~~~~~~~~~~~~~
-Products
+Header/noriu cia per vidury pavadinimo
 ~~~~~~~~~~~~~~~~~
 */
 
-.products{
-    display: flex;
+.header {
+  background-color: black;
+  justify-content: space-around;
+  align-items: center;
+  
+
 }
 
+.site-title {
+  font-size: 2rem;
+  color: var(--clr-white);
+  text-decoration: none;
+  list-style: none;
+}
+
+.h3 {
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+
     /* 
 ~~~~~~~~~~~~~~~~~
-Navbar
+Navbar noriu cia visko per vidury isplesta, o cart labiau i sona
 ~~~~~~~~~~~~~~~~~
 */
+
+.nav li:hover {
+  background-color: #000000;
+  opacity: 70%;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  padding: .25rem;
+}
 
 .nav {
     background-color: black;
     color: white;
-    display: flex;
-    justify-content: space-between;
+    height: 80%;
+    width: 100%;
+    justify-content: space-around;
     align-items: center;
     gap: 2rem;
     padding: 0 1rem;
-}
 
-.site-title {
-    font-size: 2rem;
 }
-
-.nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-.nav a {
-    color: inherit;
-    text-decoration: none;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: .25rem;
-}
-
-.nav li.active {
-    background-color: #777;
-}
-
-.nav li:hover {
-    background-color: #555;
-}
-
 
 /* 
 ~~~~~~~~~~~~~~~~~
@@ -88,30 +118,15 @@ Navbar cart icon
 ~~~~~~~~~~~~~~~~~
 */
 
-.loading {
-    text-align: center;
-    margin-top: 5rem;
-  }
-
-nav {
-    background: var(--clr-primary);
-    padding: 1.25rem 2rem;
-  }
-
 .nav-center {
-    max-width: var(--fixed-width);
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  max-width: var(--fixed-width);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-nav h3 {
-    margin-bottom: 0;
-    letter-spacing: 1px;
-    color: var(--clr-white);
-  }
 
 .nav-container {
     display: block;
@@ -130,7 +145,7 @@ nav svg {
     width: 1.75rem;
     height: 1.75rem;
     border-radius: 50%;
-    background: var(--clr-primary-light);
+    background: var(--clr-primary-light);    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -195,6 +210,45 @@ Cart
     border-color: var(--clr-primary);
     color: var(--clr-primary);
   }
+
+
+      /* 
+~~~~~~~~~~~~~~~~~
+Products
+~~~~~~~~~~~~~~~~~
+*/
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 10px pink;
+  gap: 20px;
+
+}
+
+
+.products{
+  display: flex;
+
+}
+
+.oneProduct {
+  width: 500px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.productImg {
+  height: 300px;
+  width: 200px;
+  object-fit: cover;
+
+}
 
     /* 
 ~~~~~~~~~~~~~~~~~

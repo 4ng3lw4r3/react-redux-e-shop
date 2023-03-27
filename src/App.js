@@ -1,15 +1,18 @@
-import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
-import ProductList from "./components/productList/ProductList";
 import Navbar from "./components/Navbar";
-import { BrowserRouter } from 'react-router-dom';
+import ProductList from "./components/ProductList";
 import Cart from "./components/Cart";
+import Header from "./components/Header";
+import { BrowserRouter } from 'react-router-dom';
+import { Route, Routes } from "react-router-dom";
+
 
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <Header />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
