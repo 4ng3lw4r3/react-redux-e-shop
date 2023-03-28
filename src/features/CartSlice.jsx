@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import products from '../../products';
+import products from '../products';
 
 
 const initialState = {
@@ -18,7 +18,7 @@ const cartSlice = createSlice({
     },
     removeItem: (state, action) => {
       // console.log(action)
-      const itemId = action.payload
+      const itemId = action.payload;
       state.products = state.products.filter((item) =>
         item.id !== itemId);
     },

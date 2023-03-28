@@ -1,17 +1,15 @@
 import CartItem from "./CartItem"
 import { useSelector, useDispatch } from "react-redux"
-import { calculateTotals } from "../features/cart/CartSlice";
-import { openModal } from "../features/modal/ModalSlice";
+import { calculateTotals } from "../features/CartSlice";
+import { openModal } from "../features/ModalSlice";
 import { useEffect } from "react";
-import Modal from "./Modal";
+import Modal from './Modal'
 
 const Cart = () => {
 
-    const { products, total, amount, isLoading } = useSelector((store) => store.cart);
+    const { products, total, amount } = useSelector((store) => store.cart);
     const { isOpen } = useSelector((store) => store.modal);
     const dispatch = useDispatch();
-
-
 
     useEffect(() => {
         dispatch(calculateTotals());

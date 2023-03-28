@@ -1,12 +1,12 @@
 import { useDispatch } from "react-redux"
-import { clearCart } from "../features/cart/CartSlice"
-import { closeModal } from "../features/modal/ModalSlice"
+import { clearCart } from "../features/CartSlice"
+import { closeModal } from "../features/ModalSlice"
 
 const Modal = () => {
   const dispatch = useDispatch();
   return (
-    <div>
       <aside className="modal-container">
+
         <div className="modal">
           <h4>Remove all items from your shopping cart?</h4>
           <div className="btn-container">
@@ -32,7 +32,6 @@ const Modal = () => {
           </div>
         </div>
       </aside>
-    </div>
   )
 }
 

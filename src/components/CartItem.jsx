@@ -1,5 +1,5 @@
 import { ChevronDown, ChevronUp } from "../icons"
-import { removeItem, increase, decrease } from "../features/cart/CartSlice"
+import { removeItem, increase, decrease } from "../features/CartSlice"
 import { useDispatch } from "react-redux"
 
 const CartItem = ({ id, img, title, price, amount }) => {
