@@ -115,7 +115,7 @@ Header
 
    /* 
 ~~~~~~~~~~~~~~~~~
-Navbar noriu cia visko per vidury isplesta, o cart labiau i sona
+Navbar
 ~~~~~~~~~~~~~~~~~
 */
 
@@ -266,16 +266,6 @@ Cart
 Products
 ~~~~~~~~~~~~~~~~~
 */
-   /* 
-.list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  border: 90px rgb(0, 0, 0);
-  gap: 20px;
-
-} */
-
 
    .products {
      display: flex;
@@ -336,6 +326,21 @@ Products
      width: 200px;
      object-fit: cover;
    }
+
+   .add-to-cart-btn {
+    color: var(--clr-primary);
+    letter-spacing: var(--spacing);
+    cursor: pointer;
+    font-size: 0.85rem;
+    background: transparent;
+    border: none;
+    margin-top: 0.375rem;
+    transition: var(--transition);
+  }
+
+  .add-to-cart-btn:hover {
+    color: var(--clr-primary-light);
+  }
 
    /* 
 ~~~~~~~~~~~~~~~~~

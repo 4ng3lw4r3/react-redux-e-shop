@@ -3,8 +3,8 @@ import products from '../products';
 
 
 const initialState = {
-  products: products,
-  amount: 4,
+  products: [],
+  amount: 0,
   total: 0,
   isLoading: true,
 };
@@ -40,12 +40,15 @@ const cartSlice = createSlice({
       state.amount = amount;
       state.total = total
     },
+    addToCart(state, action){
+      state.products.push(action.payload)
+    }
   },
 });
 
 // console.log(cartSlice)
 
-export const { clearCart, removeItem, increase, decrease, calculateTotals } =
+export const { clearCart, removeItem, increase, decrease, calculateTotals, addToCart } =
   cartSlice.actions;
 
 export default cartSlice.reducer;
