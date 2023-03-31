@@ -3,8 +3,8 @@ import App from './App';
 import ReactDOM from 'react-dom/client';
 import { store } from './store';
 import { Provider } from 'react-redux';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css'
+import './css/styles.css'
+import './css/base.css'
 
 
 
