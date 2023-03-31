@@ -20,7 +20,7 @@ const Navbar = () => {
 
                 {/* <Link to="/" className="site-title">Angel Dust</Link> */}
 
-                <div>
+                <div className="nav-cart-icon">
                     <div className="nav-center">
                         <div className="nav-container">
                             <CartIcon />

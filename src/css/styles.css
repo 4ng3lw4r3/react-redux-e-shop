@@ -7,7 +7,7 @@ Home Carousel
    .embla {
      --slide-spacing: 1rem;
      --slide-size: 100%;
-     --slide-height: 80vh;
+     --slide-height: 100vh;
      /* padding: 1.6rem; */
    }
 
@@ -98,14 +98,12 @@ Home Carousel
 
    /* 
 ~~~~~~~~~~~~~~~~~
-Header/noriu cia per vidury pavadinimo
+Header
 ~~~~~~~~~~~~~~~~~
 */
 
    .header {
      background-color: black;
-     justify-content: space-around;
-     align-items: center;
    }
 
    .site-title {
@@ -161,10 +159,10 @@ Navbar cart icon
 ~~~~~~~~~~~~~~~~~
 */
 
+
    .nav-center {
      max-width: var(--fixed-width);
      width: 100%;
-     margin: 0 auto;
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -213,6 +211,7 @@ Cart
      margin-top: 40px;
      padding: 2.5rem 0;
      max-width: var(--fixed-width);
+     text-align: left;
    }
 
    .cart h2 {
@@ -221,12 +220,12 @@ Cart
      margin-bottom: 3rem;
    }
 
-   .empty-cart {
+ .empty-cart {
      text-transform: lowercase;
      color: var(--clr-grey-5);
      margin-top: 1rem;
      text-align: center;
-   }
+   }  
 
    .cart footer {
      margin-top: 4rem;
@@ -277,11 +276,41 @@ Products
 
 } */
 
+
    .products {
      display: flex;
      flex-wrap: wrap;
      justify-content: center;
-     gap: 2rem;
+     gap: 9rem;
+     min-height: calc(100vh - 120px);
+     background-color: #fff;
+     width: 90vw;
+     margin: auto;
+     margin-top: 1px;
+     padding: 2.5rem 0;
+   }
+
+   .product-header {
+     background-color: #fff;
+     width: 90vw;
+     margin: 0 auto;
+     margin-top: 40px;
+     padding: 2.5rem 0;
+     max-width: var(--fixed-width);
+    }
+
+   .product-header h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 10px;
+   }
+
+   .product-header h4 {
+      text-transform: lowercase;
+      color: var(--clr-grey-5);
+      margin-top: 1rem;
+      text-align: center;
    }
 
    .oneProduct {
