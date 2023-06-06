@@ -1,8 +1,8 @@
-import OneProduct from './OneProduct';
+import OneProduct from '../components/OneProduct';
 import products from '../products';
 
 
-const ProductList = () => {
+const Originals = () => {
 
   console.log(products);
 
@@ -13,8 +13,8 @@ const ProductList = () => {
 
       <section className='product-header'>
         <header>
-          <h2>Parfumes</h2>
-          <h4>Summer collection</h4>
+          <h2>Originals</h2>
+          <h4>just for you and me</h4>
         </header>
         </section>
         <section className='products'>
@@ -25,5 +25,5 @@ const ProductList = () => {
 }
 
 
-export default ProductList
+export default Originals
 

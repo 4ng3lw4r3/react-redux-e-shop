@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux"
 import { clearCart } from "../features/CartSlice"
 import { closeModal } from "../features/ModalSlice"
 
-const Modal = () => {
+const OriginalsModal = () => {
   const dispatch = useDispatch();
   return (
       <aside className="modal-container">
@@ -35,4 +35,4 @@ const Modal = () => {
   )
 }
 
-export default Modal
+export default OriginalsModal

@@ -1,9 +1,9 @@
-import CartItem from "./CartItem"
+import CartItem from "../components/CartItem"
 import { useSelector, useDispatch } from "react-redux"
 import { calculateTotals } from "../features/CartSlice";
 import { openModal } from "../features/ModalSlice";
 import { useEffect } from "react";
-import Modal from './Modal'
+import ProductModal from '../components/OriginalsModal'
 
 const Cart = () => {
 
@@ -29,7 +29,7 @@ const Cart = () => {
 
     return (
         <>
-            {isOpen && <Modal />}
+            {isOpen && <ProductModal />}
             <section className="cart">
                 <header>
                     <h2>Your bag</h2>

@@ -1,15 +1,10 @@
-import image1 from '../images/1.avif'
-import image2 from '../images/2.avif'
-import image3 from '../images/3.avif'
-import image4 from '../images/4.avif'
-import image5 from '../images/5.avif'
-import image6 from '../images/6.avif'
-import image7 from '../images/7.avif'
-import image8 from '../images/8.avif'
-import image9 from '../images/9.avif'
+const image1 = "https://i.ibb.co/0Yjg5Sv/hellokittyairpods.png"
+const image2 = "https://i.ibb.co/283KhGP/hellokittyplayer.png"
+const image3 = "https://i.ibb.co/hy9hcTD/hellokittyglasses.png"
+const image4 = "https://i.ibb.co/RSW99Yg/hellokityymic.png"
+const image5 = "https://i.ibb.co/qsg1PRg/hellokitty-joystick.png"
 
-
-export const images = [image1, image2, image3, image4, image5, image6, image7,image8, image9]
+export const images = [image1, image2, image3, image4, image5]
 
 const imageByIndex = (index) => images[index % images.length]
 

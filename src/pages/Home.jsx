@@ -1,4 +1,4 @@
-import EmblaCarousel from './Carousel'
+import EmblaCarousel from '../components/Carousel'
 
 const OPTIONS = {}
 const SLIDE_COUNT = 9
