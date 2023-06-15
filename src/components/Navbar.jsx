@@ -1,46 +1,37 @@
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { CartIcon } from "../icons";
-import { Navigate } from "react-router-dom";
+import { useEffect } from "react";
+import { calculateTotals } from "../features/CartSlice";
 
 const Navbar = () => {
-  const { amount } = useSelector((store) => store.cart);
+  const { products, amount } = useSelector((store) => store.cart);
+  const dispatch = useDispatch();
 
-  // console.log(
-  //     useSelector((store) => {
-  //     console.log(store);
-  // })
-  // );
+  useEffect(() => {
+    dispatch(calculateTotals());
+  }, [products]);
 
   return (
     <>
       <nav className="nav">
-        {/* <Link to="/" className="site-title">Angel Dust</Link> */}
-
         <div>
           <ul>
-            {/* <li className="active">
-                            <Link to="/">Home</Link>
-                        </li> */}
             <li>
               <Link to="/originals">Originals</Link>
             </li>
-            {/* <li>
-                            <Link to="/vhs">Vhs</Link>
-                        </li> */}
             <li>
               <Link to="/cart">Cart</Link>
             </li>
-
-            <div className="nav-center">
-              <div className="nav-container">
-                <CartIcon />
-                <div className="amount-container">
-                  <p className="total-amount">{amount}</p>
-                </div>
-              </div>
-            </div>
           </ul>
+        </div>
+        <div className="nav-center">
+          <div className="nav-container">
+            <CartIcon />
+            <div className="amount-container">
+              <p className="total-amount">{amount}</p>
+            </div>
+          </div>
         </div>
       </nav>
     </>
